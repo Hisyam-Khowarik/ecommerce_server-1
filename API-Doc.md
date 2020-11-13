@@ -46,6 +46,80 @@ _Response (500 - Bad Request)_
 }
 ```
 ---
+### GET /products
+
+> Get all products
+
+_Request Params_
+```
+Not needed
+```
+_Request Header_
+```
+{
+  "access_token": "<admin access token>"
+}
+```
+_Request Body_
+```
+not needed
+```
+_Response (200)_
+```
+{
+  "id": <product id>,
+  "name": "<product name>",
+  "image_url": "<product image_url>",
+  "price": "<product price>",
+  "stock": "<product stock>",
+  "category": "<product category>"
+  "UserId": "<id user admin>"
+}
+```
+_Response (500 - Bad Request)_
+```
+{
+  "msg": "Internal server error"
+}
+```
+---
+### GET /products/:id
+
+> Get product with specific id
+
+_Request Params_
+```
+Not needed
+```
+_Request Header_
+```
+{
+  "access_token": "<admin access token>"
+}
+```
+_Request Body_
+```
+not needed
+```
+_Response (200)_
+```
+{
+  "id": <product id>,
+  "name": "<product name>",
+  "image_url": "<product image_url>",
+  "price": "<product price>",
+  "stock": "<product stock>",
+  "category": "<product category>"
+  "UserId": "<id user admin>"
+}
+```
+_Response (500 - Bad Request)_
+```
+{
+  "msg": "Internal server error"
+}
+```
+---
 ### POST /products
 
 > Create new products
@@ -57,7 +131,7 @@ Not needed
 _Request Header_
 ```
 {
-  "access_token": "<your access token>"
+  "access_token": "<admin access token>"
 }
 ```
 _Request Body_
@@ -78,6 +152,7 @@ _Response (201 - Created)_
   "image_url": "<posted image_url>",
   "price": "<posted price>",
   "stock": "<posted stock>",
+  "category": "<posted category>",
   "UserId": "<posted status>"
 }
 ```
@@ -105,7 +180,7 @@ Products's ID
 _Request Header_
 ```
 {
-  "access_token": "<your access token>"
+  "access_token": "<admin access token>"
 }
 ```
 _Request Body_
@@ -161,7 +236,7 @@ Products's ID
 _Request Header_
 ```
 {
-  "access_token": "<your access token>"
+  "access_token": "<admin access token>"
 }
 ```
 _Request Body_
